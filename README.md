@@ -74,6 +74,18 @@ the skill text on 2026-11-26 and are marked as such at the top of each file.
 The author's originals may score differently; if you get them, replace these
 files and note the change.
 
+## Download link
+
+- **Landing page:** <https://smartflow-suhl-de.github.io/openbot-bot-builder/>
+- **Latest release:** <https://github.com/smartflow-suhl-de/openbot-bot-builder/releases/latest>
+- **Direct zip:** <https://github.com/smartflow-suhl-de/openbot-bot-builder/releases/latest/download/openbot-bot-builder.zip>
+
+A tag `v*` runs `.github/workflows/release.yml`, builds the zip and attaches
+it to the release, so the direct link always points at the newest build. The
+repo is private, so the link only works for accounts with access. OpenBot has
+no link that installs a zip from a URL: the download plus the three clicks in
+**Server settings → Import** stay necessary.
+
 ## Building
 
 ```bash
