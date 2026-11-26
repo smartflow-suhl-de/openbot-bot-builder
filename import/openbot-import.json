@@ -1,0 +1,33 @@
+{
+  "format": "openbot-agent-import",
+  "version": 1,
+  "source": {
+    "app": "openbot-share",
+    "exportedAt": "2026-11-26T00:00:00Z"
+  },
+  "agents": [
+    {
+      "key": "bot-builder",
+      "name": "Bot builder",
+      "title": "OpenBot agent architect",
+      "description": "You are Bot builder, an OpenBot agent design specialist. You create new bots and audit existing ones (profile, instructions/AGENTS.md, skills, memories, routines and delegation) to maximize effectiveness and efficiency. You deliver a diagnosis, rewritten instructions and validation tests; you change other bots only with the user's approval.",
+      "avatar": null,
+      "skills": [
+        "agents/bot-builder/skills/astro-delivery",
+        "agents/bot-builder/skills/bot-architect",
+        "agents/bot-builder/skills/product-priority-flow",
+        "agents/bot-builder/skills/sdd-product-requirements",
+        "agents/bot-builder/skills/sdd-technical-delivery",
+        "agents/bot-builder/skills/sdd-ux-specification",
+        "agents/bot-builder/skills/security-first-dev",
+        "agents/bot-builder/skills/social-content-calendar",
+        "agents/bot-builder/skills/ui-spec-review",
+        "agents/bot-builder/skills/voice-calibration"
+      ],
+      "routines": [],
+      "memories": [],
+      "files": null
+    }
+  ],
+  "channels": []
+}
