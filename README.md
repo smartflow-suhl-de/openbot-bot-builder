@@ -1,141 +1,138 @@
-# Bot builder für OpenBot
+# Bot builder for OpenBot
 
-Importierbares Agenten-Paket für einen selbst gehosteten OpenBot-Server: die
-Agenten-Beschreibung und zehn Skills als Zip, das OpenBot unter
-**Server-Einstellungen → Importieren** einliest.
+Importable agent package for a self-hosted OpenBot server: the agent
+description and ten skills as one zip that OpenBot reads under
+**Server settings → Import**.
 
-Ein Agent, ein Zweck: OpenBot-Agenten entwerfen, auditieren und verbessern —
-Profil, `AGENTS.md`, Skills, Erinnerungen, Routinen und Delegation. Er liefert
-Diagnose, neu geschriebene Instruktionen und Validierungstests; fremde Bots
-ändert er nur mit ausdrücklicher Freigabe des Users.
+One agent, one purpose: design, audit and improve OpenBot agents — profile,
+`AGENTS.md`, skills, memories, routines and delegation. It delivers a
+diagnosis, rewritten instructions and validation tests; it changes other bots
+only with the user's explicit approval.
 
-## Herkunft
+## Origin
 
-Der Agent wurde als öffentliche Share-Seite veröffentlicht und am 26.11.2026
-von dort übernommen:
+The agent was published as a public share page and taken over from there on
+2026-11-26:
 
-- Share-Seite: <https://openbot.run/agents/q0mAYpIXHmcGpR6oIw1rcw>
-- Anzeigename: **Bot builder** (Ersteller: „OpenBot user", kein Profilname)
-- Umfang der Vorlage: 10 eingebettete Skills, keine Routinen
+- Share page: <https://openbot.run/agents/q0mAYpIXHmcGpR6oIw1rcw>
+- Display name: **Bot builder** (creator: "OpenBot user", no profile name)
+- Template scope: 10 embedded skills, no routines
 
-Die Vorlage war vollständig auf Portugiesisch. Dieses Repo ist die
-**englische Fassung**: Beschreibung, Skill-Beschreibungen, Beispiel-Prompts und
-alle Skill-Texte wurden übersetzt. Struktur, Nummerierung, Befehle, Pfade und
-Regeln bleiben unverändert; übersetzt wurden nur die Sprache und die Namen der
-referenzierten Hilfsdateien (z. B. `competencia-profissional.md` →
+The template was entirely in Portuguese. This repo is the **English
+version**: description, skill descriptions, example prompts and all skill
+texts were translated. Structure, numbering, commands, paths and rules stay
+unchanged; only the language and the names of the referenced helper files
+were translated (e.g. `competencia-profissional.md` →
 `professional-competence.md`).
 
-Originaltexte Portugiesisch (Zwischenstand, nicht Teil des Repos):
-`/tmp/opencode/a2/` — kann jederzeit neu von der Share-Seite gezogen werden.
+Portuguese originals (intermediate copy, not part of the repo):
+`/tmp/opencode/a2/` — can be pulled again from the share page at any time.
 
-Rechte am Text liegen beim Autor; die OpenBot-App selbst steht unter PolyForm
-Noncommercial 1.0.0. Nicht als eigenes Produkt ausgeben.
+Rights to the text belong to the author; the OpenBot app itself is under
+PolyForm Noncommercial 1.0.0. Do not present it as your own product.
 
-Nicht Teil der Share-Seite und damit auch nicht hier: der private
-System-Prompt, Modell-Einstellungen, Gespräche und Workspace-Dateien des
-Erstellers.
+Not part of the share page and therefore not here: the creator's private
+system prompt, model settings, conversations and workspace files.
 
-## Was drin ist
+## What is inside
 
-| Pfad | Inhalt |
+| Path | Content |
 |---|---|
-| `AGENT.md` | die übersetzte Agenten-Beschreibung (Quelle für `description` im Import) |
-| `skills/bot-architect/` | Audit- und Erstellungs-Flow für Bots: Recherche der Profession, zwei Bewertungsachsen, Vorher/Nachher-Tests |
-| `skills/product-priority-flow/` | kurze Zyklen planen, Lieferungen mit Owner und prüfbaren Kriterien verfolgen, Statusberichte |
-| `skills/sdd-product-requirements/` | Anforderungen für Spec-Driven Development: Scope, `REQ`/`NFR`/`AC`, Abnahmekriterien, Traceability |
-| `skills/sdd-ux-specification/` | SDD-Anforderungen in implementierbare UI/UX-Specs übersetzen, UX-Abnahme, Review |
-| `skills/sdd-technical-delivery/` | technischer Plan, Traceability-Matrix, Implementierung in prüfbaren Scheiben, Validierung |
-| `skills/ui-spec-review/` | UI/UX-Specs schreiben und die Implementierung gegen die Spec prüfen |
-| `skills/astro-delivery/` | Änderungen an Astro-Sites: Diagnose, minimale Änderung, Build, Preview |
-| `skills/security-first-dev/` | Security-first für öffentliche Oberflächen: Abuse/DDoS, Header, Secrets, Dependencies |
-| `skills/social-content-calendar/` | Artikel und Ideen in Post-Entwürfe und Redaktionskalender je Netzwerk |
-| `skills/voice-calibration/` | Stimm-/Ton-Guide aus echten Texten des Users bauen und anwenden |
-| `import/openbot-import.json` | generiertes Manifest des Import-Pakets |
-| `dist/openbot-bot-builder.zip` | fertiges Import-Paket |
-| `scripts/build-import.py` | baut Manifest und Zip aus den Dateien oben, prüft die Formatgrenzen |
-| `scripts/check-import.py` | prüft ein fertiges Zip gegen die Import-Regeln |
+| `AGENT.md` | the translated agent description (source for `description` in the import) |
+| `skills/bot-architect/` | audit and creation flow for bots: research of the profession, two scoring axes, before/after tests |
+| `skills/product-priority-flow/` | plan short cycles, track deliverables with owner and verifiable criteria, status reports |
+| `skills/sdd-product-requirements/` | requirements for Spec-Driven Development: scope, `REQ`/`NFR`/`AC`, acceptance criteria, traceability |
+| `skills/sdd-ux-specification/` | turn SDD requirements into implementable UI/UX specs, UX acceptance, review |
+| `skills/sdd-technical-delivery/` | technical plan, traceability matrix, implementation in verifiable slices, validation |
+| `skills/ui-spec-review/` | write UI/UX specs and review the implementation against the spec |
+| `skills/astro-delivery/` | changes to Astro sites: diagnosis, minimal change, build, preview |
+| `skills/security-first-dev/` | security-first for public surfaces: abuse/DDoS, headers, secrets, dependencies |
+| `skills/social-content-calendar/` | turn articles and ideas into post drafts and a per-network editorial calendar |
+| `skills/voice-calibration/` | build and apply a voice/tone guide from the user's real texts |
+| `import/openbot-import.json` | generated manifest of the import package |
+| `dist/openbot-bot-builder.zip` | finished import package |
+| `scripts/build-import.py` | builds manifest and zip from the files above, checks the format limits |
+| `scripts/check-import.py` | checks a finished zip against the import rules |
 
-Quelle der Wahrheit sind `AGENT.md` und `skills/`. Manifest und Zip werden
-daraus gebaut und nicht von Hand gepflegt.
+The source of truth is `AGENT.md` and `skills/`. The manifest and the zip are
+built from them and are not maintained by hand.
 
-## Fehlende Referenzdateien
+## Missing reference files
 
-`skills/bot-architect/` verweist auf fünf Hilfsdateien unter
-`references/` (Profession, Prinzipien, Rubrik, AGENTS.md-Vorlage,
-Testprotokoll). Diese Dateien sind **nicht Teil der Share-Seite** und daher
-hier nicht enthalten. Der Skill funktioniert ohne sie, verliert aber die
-detaillierten Bewertungsraster. Wer sie braucht, muss sie aus dem
-ursprünglichen Bot des Autors ziehen oder selbst schreiben.
+`skills/bot-architect/` references five helper files under `references/`
+(profession, principles, rubric, AGENTS.md template, test protocol). These
+files are **not part of the share page** and are therefore not included here.
+The skill works without them but loses the detailed scoring rubrics. Whoever
+needs them must take them from the author's original bot or write them.
 
-## Bauen
+## Building
 
 ```bash
 ./scripts/build-import.sh
 ./scripts/check-import.py
 ```
 
-Ergebnis: `dist/openbot-bot-builder.zip` mit `openbot-import.json` und
-`agents/bot-builder/skills/…` im Wurzelverzeichnis, so wie OpenBot es
-erwartet.
+Result: `dist/openbot-bot-builder.zip` with `openbot-import.json` and
+`agents/bot-builder/skills/…` at the root, as OpenBot expects.
 
-## In OpenBot installieren
+## Installing in OpenBot
 
-Der Import läuft auf dem OpenBot-Rechner, nichts wird hochgeladen.
+The import runs on the OpenBot machine; nothing is uploaded.
 
-1. `dist/openbot-bot-builder.zip` auf den Rechner kopieren, auf dem OpenBot
-   läuft (oder die Datei dort herunterladen).
-2. In OpenBot **Server-Einstellungen → Importieren** öffnen.
-3. **Datei wählen…**, das Zip auswählen und den angezeigten Agenten
-   „Bot builder" importieren.
-4. OpenBot legt eine Kopie an: Instruktionen und die zehn Skills. Nicht
-   übernommen werden Gespräche, Erinnerungen, Modell, Provider und
-   Workspace-Dateien des Erstellers; Routinen bringt die Vorlage keine mit.
+1. Copy `dist/openbot-bot-builder.zip` to the machine that runs OpenBot
+   (or download the file there).
+2. In OpenBot open **Server settings → Import**.
+3. Choose **Select file…**, pick the zip and import the shown agent
+   "Bot builder".
+4. OpenBot creates a copy: instructions and the ten skills. Conversations,
+   memories, model, provider and workspace files of the creator are not taken
+   over; the template ships no routines.
 
-Ein zweiter Import derselben Datei überschreibt die vorhandene Kopie nicht,
-sondern legt eine weitere an (bzw. benennt kollidierende Skills um). Vorher
-entscheiden, ob die alte Kopie gelöscht werden soll.
+A second import of the same file does not overwrite the existing copy but
+creates another one (or renames colliding skills). Decide beforehand whether
+the old copy should be deleted.
 
-### Nach dem Import
+### After the import
 
-1. **Modell und Provider setzen.** Neue Agenten starten sonst leicht auf
-   `codex`; ohne ChatGPT-Login scheitert der erste Turn. Für den Anfang
-   `provider: opencode` mit einem im Katalog vorhandenen Modell und passendem
-   Reasoning-Effort wählen, dazu ein Backup-Modell.
-2. **Zugänge freigeben, aber nur die nötigen.** Der Agent liest Bots über
-   `openbot.read_agent`/`list_agents` und schreibt nur mit Freigabe. Für
-   Audits braucht er Zugriff auf die Agenten-Ordner; GitHub, Tracker oder
-   Sentry nur, wenn er auch deren Projekte prüfen soll.
-3. **Erstgespräch führen.** Ein echter Auftrag („Auditiere Bot X") ist der
-   beste Test: Der Agent soll erst lesen, dann scored, dann eine Vorlage
-   liefern — und vor jeder Änderung an einem anderen Bot fragen.
-4. **Klein testen.** Erst einen bestehenden Bot auditieren, Backup prüfen
-   (`AGENTS.md.bak-YYYYMMDD`), dann eine Änderung anwenden und den
-   Vorher/Nachher-Test laufen lassen.
-5. **Grenzen bestätigen.** Vollzugriff, Computer Use und Auto-Approve bleiben
-   beim User; der Agent darf sie nur empfehlen.
+1. **Set model and provider.** New agents otherwise tend to start on `codex`;
+   without a ChatGPT login the first turn fails. To start, choose
+   `provider: opencode` with a model present in the catalog and a suitable
+   reasoning effort, plus a backup model.
+2. **Grant access, but only what is needed.** The agent reads bots via
+   `openbot.read_agent`/`list_agents` and writes only with approval. For
+   audits it needs access to the agents' folders; GitHub, trackers or Sentry
+   only if it should also check their projects.
+3. **Run the first conversation.** A real task ("Audit bot X") is the best
+   test: the agent should read first, then score, then deliver a proposal —
+   and ask before changing another bot.
+4. **Test small.** First audit an existing bot, check the backup
+   (`AGENTS.md.bak-YYYYMMDD`), then apply one change and run the before/after
+   test.
+5. **Confirm the limits.** Full access, Computer Use and auto-approve stay
+   with the user; the agent may only recommend them.
 
-### Ohne Zip installieren
+### Installing without the zip
 
-1. Repo in den Workspace des Agenten klonen, z. B. nach
+1. Clone the repo into the agent's workspace, e.g. to
    `Agents/<name>/openbot-bot-builder`.
-2. `AGENT.md` als Agenten-Beschreibung einsetzen (Text ab „You are Bot
-   builder …"; maximal 2.000 Zeichen).
-3. Dem Agenten den Auftrag geben, die zehn Ordner aus `skills/` mit seinen
-   lokalen Skill-Werkzeugen (`create_skill`) zu registrieren. Nicht die
-   installierten Kopien unter `.agents/skills` von Hand überschreiben.
+2. Use `AGENT.md` as the agent description (text from "You are Bot builder
+   …"; max. 2,000 characters).
+3. Ask the agent to register the ten folders from `skills/` with its local
+   skill tools (`create_skill`). Do not overwrite the installed copies under
+   `.agents/skills` by hand.
 
-## Pflege
+## Maintenance
 
-- Skill-Text ändern: `skills/<name>/SKILL.md` bearbeiten (Frontmatter `name`
-  muss zum Ordnernamen passen), dann `./scripts/build-import.sh` und
+- Change a skill text: edit `skills/<name>/SKILL.md` (the frontmatter `name`
+  must match the folder name), then run `./scripts/build-import.sh` and
   `./scripts/check-import.py`.
-- Neue Fassung einspielen: neu bauen, importieren, danach erneut testen.
-  Keine ungetestete Aktualisierung in einem laufenden Kanal.
-- Übersetzung: Fachbegriffe (Spec-Driven Development, Owner, Handoff,
-  Fail-closed, Rate Limiting) bleiben englisch; keine Inhalte ergänzen, die
-  nicht in der Vorlage stehen.
+- Roll out a new version: rebuild, import, then test again. No untested
+  update into a running channel.
+- Translation: technical terms (Spec-Driven Development, owner, handoff,
+  fail-closed, rate limiting) stay English; do not add content that is not in
+  the template.
 
-Grenzen des Formats, die das Skript prüft: Agenten-Beschreibung 2.000
-Zeichen, Name 80, Titel 120, 32 Skills je Agent, 64 Routinen, 80 Zeichen
-Routinenname, 200 Dateien je Skill-Ordner, keine `.env`-Dateien, Schlüssel
-oder verschachtelten Archive im Zip.
+Format limits that the script checks: agent description 2,000 characters,
+name 80, title 120, 32 skills per agent, 64 routines, 80 characters per
+routine name, 200 files per skill folder, no `.env` files, keys or nested
+archives in the zip.
