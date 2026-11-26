@@ -76,7 +76,7 @@ files and note the change.
 
 ## Download link
 
-- **Landing page:** <https://smartflow-suhl-de.github.io/openbot-bot-builder/>
+- **Landing page:** `docs/index.html` (ready for GitHub Pages or any static host; GitHub Pages is not available for this private repo on the current plan)
 - **Latest release:** <https://github.com/smartflow-suhl-de/openbot-bot-builder/releases/latest>
 - **Direct zip:** <https://github.com/smartflow-suhl-de/openbot-bot-builder/releases/latest/download/openbot-bot-builder.zip>
 
