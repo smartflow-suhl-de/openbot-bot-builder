@@ -57,13 +57,22 @@ system prompt, model settings, conversations and workspace files.
 The source of truth is `AGENT.md` and `skills/`. The manifest and the zip are
 built from them and are not maintained by hand.
 
-## Missing reference files
+## Reference files
 
-`skills/bot-architect/` references five helper files under `references/`
-(profession, principles, rubric, AGENTS.md template, test protocol). These
-files are **not part of the share page** and are therefore not included here.
-The skill works without them but loses the detailed scoring rubrics. Whoever
-needs them must take them from the author's original bot or write them.
+`skills/bot-architect/` references five helper files under `references/`:
+
+| File | Content |
+|---|---|
+| `references/professional-competence.md` | research the real profession, competency matrix, scoring competence (0–2) |
+| `references/principles.md` | 12 agent design principles with sources |
+| `references/rubric.md` | 10 configuration criteria scored 1/3/5, separate from competence |
+| `references/agent-template.md` | profile rules and AGENTS.md skeleton, rewrite procedure |
+| `references/test-protocol.md` | before/after tests on real deliverables, delegation checks |
+
+These files are **not part of the share page**. They were reconstructed from
+the skill text on 2026-11-26 and are marked as such at the top of each file.
+The author's originals may score differently; if you get them, replace these
+files and note the change.
 
 ## Building
 
